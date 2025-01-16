@@ -430,7 +430,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.sm6150-libperfmgr
+    android.hardware.power-service.lineage-libperfmgr \
+    libqti-perfd-client
 
 # QCOM
 PRODUCT_COPY_FILES += \
@@ -516,7 +517,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     vendor/qcom/opensource/commonsys/display \
-    vendor/qcom/opensource/commonsys-intf/display
+    vendor/qcom/opensource/commonsys-intf/display \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client
 
 # Telephony
 PRODUCT_PACKAGES += \
