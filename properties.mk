@@ -227,19 +227,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=1
 
-# LMKd
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lmk.thrashing_limit=200 \
-    ro.lmk.kill_heaviest_task=true \
-    ro.lmk.swap_free_low_percentage=10 \
-    ro.lmk.psi_partial_stall_ms=120 \
-    ro.lmk.swap_util_max=100 \
-    ro.lmk.threshold_decay=30 \
-    ro.lmk.thrashing_limit_decay=50 \
-    ro.lmk.critical_upgrade=true \
-    ro.lmk.upgrade_pressure=40 \
-    ro.lmk.downgrade_pressure=60
-
 # Logs
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.log.tag.OpenGLRenderer=S
@@ -282,8 +269,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.vendor.perf.scroll_opt=true
+    ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
