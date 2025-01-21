@@ -2,4 +2,3 @@ allow kernel block_device:blk_file { open read write };
 allow kernel block_device:dir search;
 allow kernel fsg_firmware_file:file read;
 allow kernel kernel:capability kill;
-dontaudit hal_usb_default self:capability dac_override;
