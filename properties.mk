@@ -155,7 +155,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ril.fast.dormancy.timeout=3 \
     ro.mot.eri.losalert.delay=100 \
     ro.vold.umsdirtyratio=20 \
-    power.saving.mode=1 \
+    power.saving.mode=1
 
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
