@@ -1,10 +1,6 @@
 # Bluetooth
 bluetooth.device.default_name=Moto G⁹ Plus
 
-# ART    
-dalvik.vm.minidebuginfo=false
-dalvik.vm.dex2oat-minidebuginfo=false
-
 # Cached app compaction
 persist.device_config.activity_manager.use_compaction=true
 
