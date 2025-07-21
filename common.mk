@@ -26,6 +26,11 @@ PRODUCT_PACKAGES += \
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/motorola/sm6150-common/sm6150-common-vendor.mk)
 
+# RFS MSM MPSS symlinks
+PRODUCT_PACKAGES += \
+    rfs_msm_mpss_readonly_vendor_fsg_symlink
+
+# Lineage Health
 $(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
 
 # Additional native libraries
