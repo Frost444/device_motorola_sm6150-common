@@ -134,9 +134,6 @@ on boot
     # Disable serial console
     stop console
 
-    #Stop Statsd
-    stop statsd
-
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
