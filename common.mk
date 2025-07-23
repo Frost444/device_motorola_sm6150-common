@@ -30,6 +30,10 @@ $(call inherit-product-if-exists, vendor/motorola/sm6150-common/sm6150-common-ve
 PRODUCT_PACKAGES += \
     rfs_msm_mpss_readonly_vendor_fsg_symlink
 
+# RFS MDM MPSS symlinks
+PRODUCT_PACKAGES += \
+    rfs_mdm_mpss_readonly_vendor_fsg_symlink
+
 # Lineage Health
 $(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
 
