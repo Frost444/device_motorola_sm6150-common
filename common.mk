@@ -20,8 +20,8 @@ PRODUCT_PACKAGES += \
     vendor_dsp_mountpoint \
     vendor_firmware_mnt_mountpoint \
     vendor_fsg_mountpoint \
-    vendor_super_modem_mountpoint \
-    vendor_super_fsg_mountpoint
+    vendor_super_fsg_mountpoint \
+    vendor_super_modem_mountpoint
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/motorola/sm6150-common/sm6150-common-vendor.mk)
