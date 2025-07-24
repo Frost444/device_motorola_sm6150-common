@@ -126,10 +126,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.bluetooth.soc=cherokee
 
-# Blur
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sysui.disableBlur=false
-
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.expose.aux=1
@@ -194,18 +190,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.color_saturation=1.0 \
     persist.sys.sf.native_mode=1 \
     persist.sys.sf.force_brightness_capability=1 \
+    debug.sf.disable_client_composition_cache=1 \
     ro.opengles.version=196610 \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
     vendor.display.enable_default_color_mode=1 \
     vendor.gralloc.disable_ubwc=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_hwc_vds=0
+    debug.sf.enable_hwc_vds=0 \
+    ro.config.avoid_gfx_accel=true
 
 # HWUI
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_hint_manager=true \
-    debug.hwui.target_cpu_time_percent=20
+    debug.hwui.target_cpu_time_percent=30
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -219,6 +217,18 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Incremental FS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=1
+
+# LMKd
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.thrashing_limit=200 \
+    ro.lmk.swap_free_low_percentage=10 \
+    ro.lmk.psi_partial_stall_ms=120 \
+    ro.lmk.swap_util_max=100 \
+    ro.lmk.threshold_decay=30 \
+    ro.lmk.thrashing_limit_decay=50 \
+    ro.lmk.critical_upgrade=true \
+    ro.lmk.upgrade_pressure=40 \
+    ro.lmk.downgrade_pressure=60
 
 # Logs
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -240,12 +250,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true
 
-# Memory optimizations
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.vendor.qti.sys.fw.bservice_age=5000 \
-    ro.vendor.qti.sys.fw.bservice_enable=true \
-    ro.vendor.qti.sys.fw.bservice_limit=14
-
 # Netflix
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.netflix.bsp_rev=Q6150-17263-1
@@ -265,9 +269,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.vendor.qti.sys.fw.bg_apps_limit=21
 
 # Qualcomm System Daemon
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -335,7 +336,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.early.sf.duration=21000000 \
     debug.sf.early.app.duration=16500000 \
     debug.sf.earlyGl.sf.duration=13500000 \
-    debug.sf.earlyGl.app.duration=21000000
+    debug.sf.earlyGl.app.duration=21000000 \
+    debug.sf.enable_transaction_tracing=false
 
 # Sensor
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

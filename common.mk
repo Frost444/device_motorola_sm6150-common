@@ -256,6 +256,9 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # Dexpreopt
 WITH_DEXPREOPT_DEBUG_INFO := false
 
+# Do not generate libartd.
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
 # Bruh
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
