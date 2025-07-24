@@ -8,7 +8,8 @@ soong_namespace {
         "hardware/google/interfaces",
         "hardware/google/pixel",
         "hardware/lineage/interfaces/power-libperfmgr",
-        "hardware/qcom-caf/common/libqti-perfd-client"
+        "hardware/qcom-caf/common/libqti-perfd-client",
+        "hardware/motorola"
     ],
 }
 
@@ -24,36 +25,4 @@ install_symlink {
     vendor: true,
     installed_location: "firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini",
     symlink_target: "/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
-}
-
-install_symlink {
-    name: "rfs_mdm_mpss_readonly_vendor_fsg_symlink",
-    vendor: true,
-    installed_location: "rfs/mdm/mpss/readonly/vendor/fsg",
-    symlink_target: "/vendor/fsg",
-}
-
-install_symlink {
-    name: "rfs_msm_mpss_readonly_vendor_fsg_symlink",
-    vendor: true,
-    installed_location: "rfs/msm/mpss/readonly/vendor/fsg",
-    symlink_target: "/vendor/fsg",
-}
-
-mkdir {
-    name: "vendor_fsg_mountpoint",
-    dir: "fsg",
-    vendor: true,
-}
-
-mkdir {
-    name: "vendor_super_fsg_mountpoint",
-    dir: "super_fsg",
-    vendor: true,
-}
-
-mkdir {
-    name: "vendor_super_modem_mountpoint",
-    dir: "super_modem",
-    vendor: true,
 }
