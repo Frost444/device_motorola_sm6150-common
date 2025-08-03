@@ -253,9 +253,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUIGoogle \
     Settings
 
-# Dexpreopt
-WITH_DEXPREOPT_DEBUG_INFO := false
-
 # Do not generate libartd.
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
