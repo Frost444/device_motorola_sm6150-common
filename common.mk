@@ -469,7 +469,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor \
     android.hardware.radio@1.5.vendor \
-    android.hardware.radio@1.6.vendor
+    android.hardware.radio@1.6.vendor \
     android.hardware.radio@1.4.vendor \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.config@1.3.vendor \
