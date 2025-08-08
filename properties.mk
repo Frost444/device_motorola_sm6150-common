@@ -191,7 +191,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.color_saturation=1.0 \
     persist.sys.sf.native_mode=1 \
     persist.sys.sf.force_brightness_capability=1 \
-    debug.sf.disable_client_composition_cache=1 \
     ro.opengles.version=196610 \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
     vendor.display.enable_default_color_mode=1 \
@@ -206,6 +205,42 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_hint_manager=true \
     debug.hwui.target_cpu_time_percent=20
 
+# memory
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.config.fha_enable=true \
+    ro.sys.fw.bg_apps_limit=32 \
+    ro.config.dha_cached_max=16 \
+    ro.config.dha_empty_max=42 \
+    ro.config.dha_empty_init=32 \
+    ro.config.dha_lmk_scale=0.545 \
+    ro.config.dha_th_rate=2.3 \
+    ro.config.sdha_apps_bg_max=64 \
+    ro.config.sdha_apps_bg_min=8
+
+# LMKD
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.lmk.low=1001 \
+    ro.lmk.medium=800 \
+    ro.lmk.critical=0 \
+    ro.lmk.kill_heaviest_task=true \
+    ro.lmk.kill_timeout_ms=50 \
+    ro.lmk.swap_free_low_percentage=10 \
+    ro.lmk.thrashing_limit=55 \
+    ro.lmk.thrashing_limit_decay=35 \
+    ro.lmk.swap_util_max=90 \
+    ro.lmk.psi_partial_stall_ms=200 \
+    ro.lmk.psi_complete_stall_ms=700 \
+    ro.lmk.filecache_min_kb=153600 \
+    ro.lmk.stall_limit_critical=40 \
+    ro.lmk.enable_userspace_lmk=true \
+    ro.lmk.kill_heaviest_task_dup=true \
+    ro.lmk.enhance_batch_kill=false \
+    ro.lmk.enable_watermark_check=true \
+    ro.lmk.use_new_strategy_dup=true \
+    ro.lmk.super_critical=606 \
+    ro.lmk.direct_reclaim_pressure=45 \
+    ro.lmk.reclaim_scan_threshold=0 \
+
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
@@ -218,18 +253,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Incremental FS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=1
-
-# LMKd
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lmk.thrashing_limit=200 \
-    ro.lmk.swap_free_low_percentage=10 \
-    ro.lmk.psi_partial_stall_ms=120 \
-    ro.lmk.swap_util_max=100 \
-    ro.lmk.threshold_decay=30 \
-    ro.lmk.thrashing_limit_decay=50 \
-    ro.lmk.critical_upgrade=true \
-    ro.lmk.upgrade_pressure=40 \
-    ro.lmk.downgrade_pressure=60
 
 # Logs
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
