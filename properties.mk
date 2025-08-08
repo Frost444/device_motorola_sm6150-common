@@ -158,7 +158,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Disable Skia tracing by default
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    debug.hwui.skia_atrace_enabled=false
+    debug.hwui.skia_tracing_enabled=false \
+    debug.hwui.skia_use_perfetto_track_events=false
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
