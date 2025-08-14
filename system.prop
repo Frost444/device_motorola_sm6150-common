@@ -1,6 +1,9 @@
-# InfinityX
-ro.product.marketname=Moto G9 Plus
-ro.infinity.soc=Snapdragon® 730G 
-ro.infinity.battery=5000 mAh
-ro.infinity.display=1080 x 2400, 60 Hz
-ro.infinity.camera=64MP + 8MP + 2MP
+# RIL Powersaving
+persist.radio.add_power_save=1
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+ro.ril.fast.dormancy.rule=1
+ro.ril.fast.dormancy.timeout=3
+ro.mot.eri.losalert.delay=100
+ro.vold.umsdirtyratio=20
+power.saving.mode=1
