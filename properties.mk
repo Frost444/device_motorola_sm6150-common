@@ -186,7 +186,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=0 \
-    debug.sf.enable_adpf_cpu_hint=true \
     persist.demo.hdmirotationlock=false \
     persist.sys.sf.color_saturation=1.0 \
     persist.sys.sf.native_mode=1 \
@@ -199,11 +198,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_hwc_vds=0 \
     ro.config.avoid_gfx_accel=true
-
-# HWUI
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.hwui.use_hint_manager=true \
-    debug.hwui.target_cpu_time_percent=10
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
