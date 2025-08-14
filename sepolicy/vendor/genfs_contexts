@@ -28,6 +28,18 @@ genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0065/power_supply/bq2597
 genfscon sysfs /devices/virtual/laser/stmvl53l1                                 u:object_r:vendor_sysfs_laser:s0
 genfscon sysfs /module/stmvl53l1                                                u:object_r:vendor_sysfs_laser:s0
 
+# genfs_contexts
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9]+/name                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9]+/active_count            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9]+/active_time_ms         u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9]+/event_count             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9]+/expire_count            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9]+/last_change_ms          u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9]+/max_time_ms             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9]+/prevent_suspend_time_ms u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9]+/total_time_ms           u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9]+/wakeup_count            u:object_r:sysfs_wakeup:s0
+
 # Motorola
 genfscon proc /bootinfo                                                         u:object_r:proc_moto_boot:s0
 
