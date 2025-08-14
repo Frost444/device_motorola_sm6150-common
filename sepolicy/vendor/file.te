@@ -8,6 +8,9 @@ type persist_chargeonly_file, file_type, data_file_type;
 # ADSPD
 type sysfs_adspd, sysfs_type, fs_type;
 
+# Sys
+type sysfs_wakeup, fs_type, sysfs_type;
+
 # Cutback
 type cutback_data_file, file_type, data_file_type;
 type cutback_socket, file_type;
