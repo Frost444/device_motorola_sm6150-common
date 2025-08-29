@@ -215,7 +215,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Logs
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.log.tag.OpenGLRenderer=S \
-    persist.log.tag.ACDB-LOADER=S
+    persist.log.tag.ACDB-LOADER=S \
+    persist.log.tag.QMI_FW=S \
+    persist.log.tag.ETS-MAIN=S \
+    persist.log.tag.ETS-FPNORMALIO=S \
+    persist.log.tag.ETS_TZ_CLIENT=S \
+    persist.log.tag.ETS-NAVI=S
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \

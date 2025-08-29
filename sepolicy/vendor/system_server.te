@@ -1,5 +1,3 @@
-type sysfs_wakeup, fs_type, sysfs_type;
-
 allow system_server sysfs_wakeup:file r_file_perms;
 
 allow system_server hal_audio_default:binder { call transfer };

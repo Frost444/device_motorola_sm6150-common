@@ -3,3 +3,5 @@ type vl53l1_device, dev_type;
 
 # Thermal
 type thermal_device, dev_type;
+
+type device_latency, dev_type;

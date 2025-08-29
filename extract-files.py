@@ -27,6 +27,14 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('system', 'system/system_ext'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
+
+    # Camera fixups
+    'vendor/lib64/camera/components/com.qti.node.gpu.so': blob_fixup()
+        .regex_replace('camera.mot.is.coming.cts', 'vendor.camera.coming.cts'),
+    'vendor/lib64/hw/camera.qcom.so': blob_fixup()
+        .regex_replace('camera.mot.is.coming.cts', 'vendor.camera.coming.cts'),
+    'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
+        .regex_replace('camera.mot.is.coming.cts', 'vendor.camera.coming.cts'),
 }
 
 namespace_imports = [
@@ -51,3 +59,4 @@ module = ExtractUtilsModule(
 if __name__ == '__main__':
     utils = ExtractUtils.device(module)
     utils.run()
+
