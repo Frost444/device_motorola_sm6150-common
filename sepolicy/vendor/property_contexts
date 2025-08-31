@@ -41,11 +41,19 @@ vendor.powerhal.lpm        u:object_r:vendor_power_prop:s0
 vendor.powerhal.init       u:object_r:vendor_power_prop:s0
 vendor.powerhal.rendering  u:object_r:vendor_power_prop:s0
 
+# NFC
+persist.vendor.nfc.     u:object_r:vendor_nfc_prop:s0
+ro.vendor.nfc.          u:object_r:vendor_nfc_prop:s0
+vendor.nfc.fw_status    u:object_r:vendor_nfc_prop:s0
+
 # FM Radio
 ro.vendor.fm.              u:object_r:vendor_fm_prop:s0
 
 # Camera
-vendor.camera.coming.cts   u:object_r:vendor_camera_prop:s0
+persist.vendor.media.recorder.flip    u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.res.fmq.size         u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.req.fmq.size         u:object_r:vendor_camera_prop:s0
+vendor.camera.coming.cts              u:object_r:vendor_camera_prop:s0
 
 # Motorola fingerprint
 persist.vendor.hardware.fingerprint            u:object_r:vendor_mot_fingerprint_prop:s0
