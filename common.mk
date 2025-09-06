@@ -259,6 +259,7 @@ PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
 # Use a profile based boot image for this device. Note that this is currently a
 # generic profile and not Android Go optimized.
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := \
     frameworks/base/boot/boot-image-profile.txt \
@@ -266,6 +267,7 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := \
 
 # Reduce system server verbosity.
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_OTHER_JAVA_DEBUG_INFO := false
 
 # Disable Scudo outside of eng builds to save RAM.
@@ -548,7 +550,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service \
+    android.hardware.wifi@1.0-service \
     hostapd \
     libwpa_client \
     libwifi-hal-ctrl \
