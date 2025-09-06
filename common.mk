@@ -257,6 +257,14 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # Do not generate libartd.
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
+# Enable whole-program R8 Java optimizations for SystemUI and system_server,
+# but also allow explicit overriding for testing and development.
+SYSTEM_OPTIMIZE_JAVA ?= true
+SYSTEMUI_OPTIMIZE_JAVA ?= true
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    dalvik.vm.systemuicompilerfilter=speed
+
 # Use a profile based boot image for this device. Note that this is currently a
 # generic profile and not Android Go optimized.
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
