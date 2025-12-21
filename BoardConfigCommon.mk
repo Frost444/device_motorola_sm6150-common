@@ -108,8 +108,6 @@ ART_BUILD_HOST_DEBUG := false
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # ART
-WITH_DEXPREOPT := true
-DEX_PREOPT_DEFAULT := generate-vdex-and-image
 WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Audio
