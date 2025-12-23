@@ -270,6 +270,9 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Speed profile services and wifi-service to reduce RAM and storage.
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
+# Dedupe VNDK libraries with identical core variants.
+TARGET_VNDK_USE_CORE_VARIANT := true
+
 # Malloc
 PRODUCT_DISABLE_SCUDO := true
 
