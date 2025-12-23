@@ -271,10 +271,10 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Dedupe VNDK libraries with identical core variants.
-TARGET_VNDK_USE_CORE_VARIANT := true
+#TARGET_VNDK_USE_CORE_VARIANT := true
 
 # Malloc
-PRODUCT_DISABLE_SCUDO := true
+#PRODUCT_DISABLE_SCUDO := true
 
 # DebugFS
 OVERRIDE_ENABLE_UFFD_GC := false
