@@ -218,9 +218,6 @@ endif
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# prop
-TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
-
 # Security Patch Level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
