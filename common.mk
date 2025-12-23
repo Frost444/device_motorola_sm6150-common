@@ -270,6 +270,9 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Speed profile services and wifi-service to reduce RAM and storage.
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
+# Malloc
+PRODUCT_DISABLE_SCUDO := true
+
 # DebugFS
 OVERRIDE_ENABLE_UFFD_GC := false
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
