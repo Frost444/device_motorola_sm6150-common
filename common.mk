@@ -35,7 +35,7 @@ PRODUCT_PACKAGES += \
     rfs_mdm_mpss_readonly_vendor_fsg_symlink
 
 # Lineage Health
-$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -180,7 +180,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
 
-$(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # Bluetooth
 PRODUCT_PACKAGES += \

@@ -167,7 +167,7 @@ DEVICE_MATRIX_FILE += $(VENDOR_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(VENDOR_PATH)/manifest.xml
 
 # Init
-$(call soong_config_set_bool,libinit,vendor_init_lib,libinit_sm6150)
+$(call soong_config_set,libinit,vendor_init_lib,libinit_sm6150)
 TARGET_RECOVERY_DEVICE_MODULES := libinit_sm6150
 
 # Jemalloc
