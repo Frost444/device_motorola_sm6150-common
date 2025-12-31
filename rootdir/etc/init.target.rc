@@ -50,6 +50,10 @@ on init
     chown system system /dev/stune/top-app/schedtune.boost
     chown system system /dev/cpu_dma_latency
 
+    # Workarround for cache
+    rm /data/resource-cache
+    rm /data/system/package_cache
+
     chmod 0664 /dev/stune/top-app/schedtune.boost
     chmod 0664 /dev/cpu_dma_latency
 
