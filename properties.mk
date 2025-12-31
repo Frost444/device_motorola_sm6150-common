@@ -325,7 +325,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.sf.duration=13500000 \
     debug.sf.earlyGl.app.duration=21000000 \
     debug.sf.enable_transaction_tracing=false \
-    debug.sf.enable_gl_backpressure=false
+    debug.sf.enable_gl_backpressure=false \
+    debug.sf.enable_egl_image_tracker=0
 
 # Sensor
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
