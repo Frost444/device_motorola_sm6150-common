@@ -25,13 +25,12 @@ VENDOR_PATH := device/motorola/sm6150-common
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a76
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := generic
+TARGET_2ND_CPU_VARIANT := cortex-a76
 
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
@@ -170,8 +169,7 @@ $(call soong_config_set,libinit,vendor_init_lib,libinit_sm6150)
 TARGET_RECOVERY_DEVICE_MODULES := libinit_sm6150
 
 # Jemalloc
-MALLOC_SVELTE := true
-MALLOC_SVELTE_FOR_LIBC32 := true
+MALLOC_LOW_MEMORY := true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864

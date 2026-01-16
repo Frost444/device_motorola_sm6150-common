@@ -197,7 +197,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_hwc_vds=0 \
-    ro.config.avoid_gfx_accel=true
+    ro.config.avoid_gfx_accel=true \
+    ro.launcher.blur.appLaunch=0 \
+    persist.device_config.activity_manager.use_compaction=true
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -312,6 +314,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.has_wide_color_display=true \
     ro.surface_flinger.has_HDR_display=true \
     ro.surface_flinger.use_color_management=true \
+    ro.surface_flinger.supports_background_blur=0 \
     ro.surface_flinger.wcg_composition_dataspace=143261696 \
     ro.surface_flinger.protected_contents=true \
     ro.surface_flinger.clear_slots_with_set_layer_buffer=true

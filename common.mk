@@ -280,6 +280,10 @@ PRODUCT_DISABLE_SCUDO := true
 OVERRIDE_ENABLE_UFFD_GC := false
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
+# Disable async MTE on system_server
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    arm64.memtag.process.system_server=off
+
 # Device ID attestation
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
