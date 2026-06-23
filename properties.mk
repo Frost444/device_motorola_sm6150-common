@@ -173,6 +173,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_optimize_refresh=1 \
     vendor.display.use_smooth_motion=1 \
     vendor.display.disable_offline_rotator=1 \
+    vendor.display.disable_rotator_downscale=1 \
     vendor.display.disable_hw_recovery_dump=1
 
 # DRM
