@@ -168,8 +168,11 @@ DEVICE_MANIFEST_FILE += $(VENDOR_PATH)/manifest.xml
 $(call soong_config_set,libinit,vendor_init_lib,libinit_sm6150)
 TARGET_RECOVERY_DEVICE_MODULES := libinit_sm6150
 
+
 # Jemalloc
-MALLOC_LOW_MEMORY := true
+MALLOC_SVELTE := true
+MALLOC_SVELTE_FOR_LIBC32 := true
+MALLOC_SVELTE_FOR_LIBC64 := true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
