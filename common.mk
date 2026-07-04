@@ -267,6 +267,12 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := \
 # Reduce system server verbosity.
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
+# Moto Camera 2
+TARGET_MOTCAMERA2 := whitney
+TARGET_USES_MOTCAMERA2 := true
+
+$(call inherit-product, vendor/motorola/MotCamera2/motcamera2.mk)
+
 # Speed profile services and wifi-service to reduce RAM and storage.
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
