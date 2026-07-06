@@ -16,8 +16,3 @@ allow hal_audio_default self:fd use;
 
 allow hal_audio_default input_device:dir r_dir_perms;
 allow hal_audio_default input_device:chr_file { r_file_perms ioctl };
-
-get_prop(audioserver, vendor_audio_prop) # If Google or MTK device skip line
-
-allow audioserver unlabeled:file { read write open getattr };
-allow hal_audio_default hal_audio_default:process { execmem };
