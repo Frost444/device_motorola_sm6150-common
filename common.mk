@@ -242,6 +242,9 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libutils.vendor
 
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Dexpreopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep \
