@@ -230,10 +230,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Crypto
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
@@ -278,7 +274,6 @@ PRODUCT_DISABLE_SCUDO := true
 USE_DEX2OAT_DEBUG := false
 
 # DebugFS
-OVERRIDE_ENABLE_UFFD_GC := false
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # Disable async MTE on system_server
@@ -512,6 +507,7 @@ PRODUCT_SOONG_NAMESPACES += \
 	$(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/power-libperfmgr \
+    hardware/google/pixel/pixelstats \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/motorola
@@ -545,6 +541,9 @@ PRODUCT_PACKAGES_DEBUG += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service.dual_role_usb
+
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
 
 # Wifi
 PRODUCT_PACKAGES += \
